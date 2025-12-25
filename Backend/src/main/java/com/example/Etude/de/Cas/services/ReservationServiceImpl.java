@@ -1,8 +1,7 @@
-package com.example.Etude.de.Cas.ServiceImpl;
+package com.example.Etude.de.Cas.services;
 
 import com.example.Etude.de.Cas.entities.Reservation;
 import com.example.Etude.de.Cas.repositories.ReservationRepository;
-import com.example.Etude.de.Cas.services.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
