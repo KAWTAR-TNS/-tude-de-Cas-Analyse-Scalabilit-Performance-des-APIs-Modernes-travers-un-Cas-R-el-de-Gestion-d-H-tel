@@ -1,0 +1,25 @@
+type Reservation {
+    id: ID
+    dateDebut: String
+    dateFin: String
+    preferences: String
+}
+
+type Query {
+    reservation(id: ID): Reservation
+}
+
+type Mutation {
+    createReservation(
+        dateDebut: String,
+        dateFin: String,
+        preferences: String
+    ): Reservation
+
+    updateReservation(
+        id: ID,
+        preferences: String
+    ): Reservation
+
+    deleteReservation(id: ID): Boolean
+}
