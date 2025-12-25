@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+service ReservationService {
+  rpc Create (ReservationRequest) returns (ReservationResponse);
+  rpc Get (ReservationId) returns (ReservationResponse);
+  rpc Delete (ReservationId) returns (Empty);
+}
+
+message ReservationRequest {
+  string dateDebut = 1;
+  string dateFin = 2;
+  string preferences = 3;
+}
+
+message ReservationResponse {
+  int64 id = 1;
+  string preferences = 2;
+}
+
+message ReservationId {
+  int64 id = 1;
+}
+
+message Empty {}
